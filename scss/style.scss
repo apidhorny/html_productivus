@@ -1,8 +1,69 @@
 @import '_normalize.scss';
 @import '_variables.scss';
+@import '_mixins.scss';
 
-// COMMON
-// /COMMON
+// === COMMON ===
+body {
+    @include roboto-font;
+}
+// === /COMMON ===
 
-// HEADER
-// /HEADER
+// === HEADER ===
+.section-header {
+}
+// === /HEADER ===
+
+// === HERO-IMAGE ===
+.section-hero-image {
+}
+// === /HERO-IMAGE ===
+
+// === CUSTOMERS ===
+.section-customers {
+}
+// === /CUSTOMERS ===
+
+// === PLAN-AND-MANAGE ===
+.section-plan-and-manage {
+}
+// === /PLAN-AND-MANAGE ===
+
+// === FEATURES ===
+.section-features {
+}
+// === /FEATURES ===
+
+// === STATS ===
+.section-stats {
+}
+// === /STATS ===
+
+// === BLOG ===
+.section-blog {
+}
+// === /BLOG ===
+
+// === QUOTES ===
+.section-quotes {
+}
+// === /QUOTES ===
+
+// === FAQ ===
+.section-faq {
+}
+// === /FAQ ===
+
+// === GET-STARTED ===
+.section-get-started {
+}
+// === /GET-STARTED ===
+
+// === NEWSLETTER ===
+.section-newsletter {
+}
+// === /NEWSLETTER ===
+
+// === FOOTER ===
+.section-footer {
+}
+// === /FOOTER ===
