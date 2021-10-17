@@ -1,7 +1,24 @@
-// === SIZES ===
+// === FONT-WEIGHT ===
+$fw-light: 100;
 $fw-regular: 400;
 $fw-medium: 600;
 $fw-bold: 700;
 
+// FONT-SIZE
+$fs-sm: 12px;
+$fs-md: 15px;
+
+// BASE-PARAMS
+$transition: 0.2s;
+// $base: 4px;
+
 // === COLORS ===
-$color-r: red;
+$color-primary: #697ca6;
+$color-secondary: #6188ff;
+
+$color-divider: #d8e3fe;
+
+// PADDING
+$padding-vertical-xs: 20px;
+$padding-vertical-sm: 60px;
+$padding-vertical: 120px;
