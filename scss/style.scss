@@ -40,6 +40,14 @@ body {
             background-color: darken(#d2e1ff, 5%);
         }
     }
+    &--danger {
+        background-color: #ffd7d7;
+        color: #d43f3f;
+
+        &:hover {
+            background-color: darken(#ffd7d7, 5%);
+        }
+    }
     &--secondary {
         background-color: #4c85ff;
         color: #fff;
@@ -91,6 +99,7 @@ h3 {
 }
 h4 {
     font-size: 24px;
+    margin-bottom: 70px;
 }
 h5 {
     font-size: 10px;
@@ -308,6 +317,85 @@ h5 {
 
 // === FEATURES ===
 .section-features {
+    background: url(/img/elements/clouds.png) 50% 50% no-repeat;
+
+    h4 {
+        font-weight: $fw-medium;
+    }
+
+    .btns {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+.features-list {
+    display: flex;
+    text-align: center;
+    padding: 0 0 70px;
+    margin: 0;
+    list-style: none;
+
+    &__item {
+        position: relative;
+        flex-basis: 25%;
+
+        &:not(:first-child) {
+            margin-left: 40px;
+        }
+
+        &:not(:first-child)::before {
+            position: absolute;
+            top: 120px;
+            left: -34px;
+            content: '';
+            height: 1px;
+            width: 28px;
+            background-color: #dae4fe;
+        }
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 32px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #f1f5ff;
+        }
+        &-title {
+            font-weight: $fw-bold;
+            font-size: $fs-md;
+            color: #4074f8;
+            margin-bottom: 28px;
+        }
+        &-text {
+            line-height: 2;
+        }
+    }
+}
+.or-block {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 16px;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 1px;
+        background-color: #adb3cb;
+    }
+    &::before {
+        margin-right: 16px;
+    }
+    &::after {
+        margin-left: 16px;
+    }
 }
 // === /FEATURES ===
 

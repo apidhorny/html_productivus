@@ -386,6 +386,15 @@ body {
   background-color: #b9d0ff;
 }
 
+.btn--danger {
+  background-color: #ffd7d7;
+  color: #d43f3f;
+}
+
+.btn--danger:hover {
+  background-color: #ffbebe;
+}
+
 .btn--secondary {
   background-color: #4c85ff;
   color: #fff;
@@ -446,6 +455,7 @@ h3 {
 
 h4 {
   font-size: 24px;
+  margin-bottom: 70px;
 }
 
 h5 {
@@ -697,6 +707,110 @@ h5 {
 
 .section-plan-and-manage__content .btn-group svg {
   margin-left: 4px;
+}
+
+.section-features {
+  background: url(/img/elements/clouds.png) 50% 50% no-repeat;
+}
+
+.section-features h4 {
+  font-weight: 600;
+}
+
+.section-features .btns {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 0 0 70px;
+  margin: 0;
+  list-style: none;
+}
+
+.features-list__item {
+  position: relative;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.features-list__item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.features-list__item:not(:first-child)::before {
+  position: absolute;
+  top: 120px;
+  left: -34px;
+  content: '';
+  height: 1px;
+  width: 28px;
+  background-color: #dae4fe;
+}
+
+.features-list__item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 32px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f1f5ff;
+}
+
+.features-list__item-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #4074f8;
+  margin-bottom: 28px;
+}
+
+.features-list__item-text {
+  line-height: 2;
+}
+
+.or-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.or-block::before, .or-block::after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 1px;
+  background-color: #adb3cb;
+}
+
+.or-block::before {
+  margin-right: 16px;
+}
+
+.or-block::after {
+  margin-left: 16px;
 }
 
 .section-stats {
