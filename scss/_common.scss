@@ -69,13 +69,13 @@ body {
     }
     &--secondary {
         background-color: #4c85ff;
-        color: #fff;
+        color: $color-white;
 
         &:hover {
             background-color: darken(#4c85ff, 5%);
         }
         &-inverted {
-            background-color: #fff;
+            background-color: $color-white;
             color: #565f82;
 
             &:hover {
