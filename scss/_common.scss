@@ -1,7 +1,7 @@
 // === COMMON ===
 body {
     @include roboto-font;
-    color: #8d96bd;
+    color: $color-primary-500;
 }
 .section-outer {
     border-bottom: 1px solid $color-divider;
@@ -20,9 +20,9 @@ body {
 .input {
     padding: 12px 16px;
     border: 1px solid transparent;
-    background-color: #efeff7;
+    background-color: $color-primary-100;
     border-radius: 2px;
-    color: #7a85ad;
+    color: $color-primary-700;
     font-size: $fs-sm;
 
     &--size-lg {
@@ -52,31 +52,31 @@ body {
     }
 
     &--primary {
-        background-color: #d2e1ff;
-        color: #3a79ff;
+        background-color: $color-primary-150;
+        color: $color-secondary-600;
 
         &:hover {
-            background-color: darken(#d2e1ff, 5%);
+            background-color: darken($color-primary-150, 5%);
         }
     }
     &--danger {
-        background-color: #ffd7d7;
-        color: #d43f3f;
+        background-color: $color-danger-400;
+        color: $color-danger-600;
 
         &:hover {
-            background-color: darken(#ffd7d7, 5%);
+            background-color: darken($color-danger-400, 5%);
         }
     }
     &--secondary {
-        background-color: #4c85ff;
+        background-color: $color-secondary-400;
         color: $color-white;
 
         &:hover {
-            background-color: darken(#4c85ff, 5%);
+            background-color: darken($color-secondary-400, 5%);
         }
         &-inverted {
             background-color: $color-white;
-            color: #565f82;
+            color: $color-primary-900;
 
             &:hover {
                 background-color: darken(#fff, 5%);
@@ -84,28 +84,28 @@ body {
         }
     }
     &--grayscale {
-        background-color: #e8ecf4;
-        color: #7382a3;
+        background-color: $color-primary-100;
+        color: $color-primary-600;
 
         &:hover {
-            background-color: darken(#e8ecf4, 5%);
+            background-color: darken($color-primary-100, 5%);
         }
     }
     &--no-bg {
-        color: #adb4d2;
-        border: 1px solid #d1d1e4;
+        color: $color-primary-200;
+        border: 1px solid $color-primary-200;
 
         &:hover {
-            color: darken(#adb4d2, 10%);
-            border: 1px solid (#d1d1e4, 10%);
+            color: darken($color-primary-200, 10%);
+            border: 1px solid ($color-primary-200, 10%);
         }
         &-inverted {
-            color: #c7d3ff;
-            border-color: #a0b4ff;
+            color: $color-primary-50;
+            border-color: $color-secondary-50;
 
             &:hover {
-                color: lighten(#c7d3ff, 10%);
-                border-color: lighten(#a0b4ff, 5%);
+                color: lighten($color-primary-50, 10%);
+                border-color: lighten($color-secondary-50, 5%);
             }
         }
     }
@@ -130,7 +130,7 @@ h6 {
     padding: 0;
     margin: 0;
     font-weight: $fw-regular;
-    color: #3d4f9f;
+    color: $color-secondary-800;
 }
 h1,
 h2 {
@@ -162,11 +162,11 @@ h5 {
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: #d1d6e3;
+        background-color: $color-primary-200;
         cursor: pointer;
         transition: $transition;
         &--active {
-            background-color: #5e80fe;
+            background-color: $color-secondary-300;
         }
         & + & {
             margin-left: 12px;

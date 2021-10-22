@@ -348,7 +348,7 @@ body {
 }
 
 .section-outer {
-  border-bottom: 1px solid #d8e3fe;
+  border-bottom: 1px solid #c7d3ff;
 }
 
 .section-inner {
@@ -428,7 +428,7 @@ body {
 
 .btn--secondary-inverted {
   background-color: #fff;
-  color: #565f82;
+  color: #495274;
 }
 
 .btn--secondary-inverted:hover {
@@ -436,31 +436,31 @@ body {
 }
 
 .btn--grayscale {
-  background-color: #e8ecf4;
+  background-color: #efeff7;
   color: #7382a3;
 }
 
 .btn--grayscale:hover {
-  background-color: #d7deec;
+  background-color: #dedeef;
 }
 
 .btn--no-bg {
-  color: #adb4d2;
-  border: 1px solid #d1d1e4;
+  color: #aeb8d0;
+  border: 1px solid #aeb8d0;
 }
 
 .btn--no-bg:hover {
-  color: #8c96c0;
-  border: 1px solid #d1d1e4, 10%;
+  color: #8e9cbd;
+  border: 1px solid #aeb8d0, 10%;
 }
 
 .btn--no-bg-inverted {
-  color: #c7d3ff;
+  color: #f5f8ff;
   border-color: #a0b4ff;
 }
 
 .btn--no-bg-inverted:hover {
-  color: #fafbff;
+  color: white;
   border-color: #bac8ff;
 }
 
@@ -534,14 +534,14 @@ h5 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #d1d6e3;
+  background-color: #aeb8d0;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .dots__item--active {
-  background-color: #5e80fe;
+  background-color: #5e80ff;
 }
 
 .dots__item + .dots__item {
@@ -644,7 +644,6 @@ h5 {
 
 .section-hero-image {
   position: relative;
-  background-color: #f4f7ff;
 }
 
 .section-hero-image .dots {
@@ -826,7 +825,7 @@ h5 {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #f1f5ff;
+  background-color: #efeff7;
 }
 
 .features-list__item-title {
@@ -899,7 +898,7 @@ h5 {
 
 .section-stats__right {
   background-color: #e9efff;
-  color: #5e80ff;
+  color: #6188ff;
 }
 
 .section-stats__icon {
@@ -1211,8 +1210,8 @@ h5 {
 
 .section-get-started {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6888ff), to(#5e80ff));
-  background: linear-gradient(#6888ff, #5e80ff);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6888ff), to(#6188ff));
+  background: linear-gradient(#6888ff, #6188ff);
   color: #fff;
   text-align: center;
 }

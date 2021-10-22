@@ -4,47 +4,53 @@ $fw-regular: 400;
 $fw-medium: 600;
 $fw-bold: 700;
 
-// FONT-SIZE
+// === FONT-SIZE ===
 $fs-sm: 12px;
 $fs-md: 15px;
 $fs-lg: 18px;
 $fs-xl: 48px;
 
-// BASE-PARAMS
+// === PADDING ===
+$padding-vertical-xs: 20px;
+$padding-vertical-sm: 60px;
+$padding-vertical: 120px;
+
+// === BASE-PARAMS ===
 $transition: 0.2s;
 // $base: 4px;
 
 // === COLORS ===
+// DIVIDER
+$color-divider: #c7d3ff;
+// WHITE
 $color-white: #fff;
-
-$color-primary: #495274;
-
-$color-primary-50: #495274;
-$color-primary-100: #495274;
-$color-primary-200: #495274;
-$color-primary-300: #495274;
-$color-primary-400: #495274;
-$color-primary-500: #495274;
-$color-primary-600: #495274;
-$color-primary-700: #495274;
-$color-primary-800: #495274;
+// RED
+$color-danger-400: #ffd7d7;
+$color-danger-500: #ff3535;
+$color-danger-600: #d43f3f;
+// YELLOW
+$color-warning-500: #ffc735;
+// CIAN
+$color-cian-500: #35aaff;
+// PRIMARY
+$color-primary-50: #f5f8ff;
+$color-primary-150: #d2e1ff;
+$color-primary-100: #efeff7;
+$color-primary-200: #aeb8d0;
+$color-primary-300: #adb4d2;
+$color-primary-400: #8e96b7;
+$color-primary-500: #8d96bd;
+$color-primary-600: #7382a3;
+$color-primary-700: #7a85ad;
+$color-primary-800: #676f95;
 $color-primary-900: #495274;
-//
-$color-secondary: #6188ff;
-$color-secondary-50: #6188ff;
-$color-secondary-100: #6188ff;
+// SECONDARY
+$color-secondary-50: #a0b4ff;
+$color-secondary-100: #6888ff;
 $color-secondary-200: #6188ff;
-$color-secondary-300: #6188ff;
-$color-secondary-400: #6188ff;
-$color-secondary-500: #6188ff;
-$color-secondary-600: #6188ff;
-$color-secondary-700: #6188ff;
-$color-secondary-800: #6188ff;
-$color-secondary-900: #6188ff;
-
-$color-divider: #d8e3fe;
-
-// PADDING
-$padding-vertical-xs: 20px;
-$padding-vertical-sm: 60px;
-$padding-vertical: 120px;
+$color-secondary-300: #5e80ff;
+$color-secondary-400: #4c85ff;
+$color-secondary-500: #5e81fe;
+$color-secondary-600: #3a79ff;
+$color-secondary-700: #4074f8;
+$color-secondary-800: #3d4f9f;
