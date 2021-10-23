@@ -1,29 +1,70 @@
 // === COMMON ===
+// html {
+//     @media (max-width: 991px) {
+//         font-size: 14px;
+//     }
+//     @media (max-width: 767px) {
+//         font-size: 12px;
+//     }
+// }
 body {
     @include roboto-font;
-    color: $color-primary-500;
+    color: $color-gray-500;
 }
 .section-outer {
-    border-bottom: 1px solid $color-divider;
+    padding: 2px 20px;
+    // border-bottom: 1px solid $color-divider;
 }
 .section-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding-top: $padding-vertical;
-    padding-bottom: $padding-vertical;
 
     &--wide {
         max-width: 1200px;
+    }
+}
+.vertical-indent {
+    @mixin vertical-indent($size) {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+
+    &--s {
+        @include vertical-indent(20px);
+    }
+    &--m {
+        @include vertical-indent(60px);
+    }
+    &--l {
+        @include vertical-indent(120px);
+    }
+
+    @media (max-width: 991px) {
+        &--m {
+            @include vertical-indent(30px);
+        }
+        &--l {
+            @include vertical-indent(60px);
+        }
+    }
+
+    @media (max-width: 575px) {
+        &--m {
+            @include vertical-indent(20px);
+        }
+        &--l {
+            @include vertical-indent(40px);
+        }
     }
 }
 
 .input {
     padding: 12px 16px;
     border: 1px solid transparent;
-    background-color: $color-primary-100;
+    background-color: $color-gray-100;
     border-radius: 2px;
-    color: $color-primary-700;
-    font-size: $fs-sm;
+    color: $color-gray-700;
+    font-size: $fs-xs;
 
     &--size-lg {
         padding: 20px 24px;
@@ -42,70 +83,74 @@ body {
     text-decoration: none;
     white-space: nowrap;
     font-weight: $fw-bold;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     transition: $transition;
     cursor: pointer;
 
     &--size-lg {
         padding: 20px 60px;
         border-radius: 5px;
+
+        @media (max-width: 991px) {
+            padding: 20px 30px;
+        }
     }
 
     &--primary {
-        background-color: $color-primary-150;
-        color: $color-secondary-600;
+        background-color: $color-gray-150;
+        color: $color-blue-600;
 
         &:hover {
-            background-color: darken($color-primary-150, 5%);
+            background-color: darken($color-gray-150, 5%);
         }
     }
     &--danger {
-        background-color: $color-danger-400;
-        color: $color-danger-600;
+        background-color: $color-red-400;
+        color: $color-red-600;
 
         &:hover {
-            background-color: darken($color-danger-400, 5%);
+            background-color: darken($color-red-400, 5%);
         }
     }
     &--secondary {
-        background-color: $color-secondary-400;
+        background-color: $color-blue-400;
         color: $color-white;
 
         &:hover {
-            background-color: darken($color-secondary-400, 5%);
+            background-color: darken($color-blue-400, 5%);
         }
         &-inverted {
             background-color: $color-white;
-            color: $color-primary-900;
+            color: $color-gray-900;
 
             &:hover {
-                background-color: darken(#fff, 5%);
+                background-color: darken($color-white, 5%);
             }
         }
     }
     &--grayscale {
-        background-color: $color-primary-100;
-        color: $color-primary-600;
+        background-color: $color-gray-100;
+        color: $color-gray-600;
 
         &:hover {
-            background-color: darken($color-primary-100, 5%);
+            background-color: darken($color-gray-100, 5%);
         }
     }
     &--no-bg {
-        color: $color-primary-200;
-        border: 1px solid $color-primary-200;
+        color: $color-gray-200;
+        border: 1px solid $color-gray-200;
 
         &:hover {
-            color: darken($color-primary-200, 10%);
-            border: 1px solid ($color-primary-200, 10%);
+            color: darken($color-gray-200, 10%);
+            border: 1px solid ($color-gray-200, 10%);
         }
         &-inverted {
-            color: $color-primary-50;
-            border-color: $color-secondary-50;
+            color: $color-gray-50;
+            border-color: $color-blue-50;
 
             &:hover {
-                color: lighten($color-primary-50, 10%);
-                border-color: lighten($color-secondary-50, 5%);
+                color: lighten($color-gray-50, 10%);
+                border-color: lighten($color-blue-50, 5%);
             }
         }
     }
@@ -130,24 +175,29 @@ h6 {
     padding: 0;
     margin: 0;
     font-weight: $fw-regular;
-    color: $color-secondary-800;
+    color: $color-blue-800;
 }
-h1,
+// h1,
 h2 {
-    font-size: 48px;
+    font-size: $fs-xxl;
     margin-bottom: 28px;
 }
 h3 {
     margin-bottom: 28px;
-    font-size: 36px;
+    font-size: $fs-xl;
 }
 h4 {
-    font-size: 24px;
+    font-size: $fs-l;
     margin-bottom: 70px;
 }
-h5 {
+
+.h5 {
+    padding: 0;
+    margin: 0;
+    font-weight: $fw-regular;
+    color: $color-blue-800;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: $fs-xxs;
     margin-bottom: 16px;
 }
 .ta-c {
@@ -162,15 +212,26 @@ h5 {
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: $color-primary-200;
+        background-color: $color-gray-200;
         cursor: pointer;
         transition: $transition;
         &--active {
-            background-color: $color-secondary-300;
+            background-color: $color-blue-300;
         }
         & + & {
             margin-left: 12px;
         }
     }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
 }
 // === /COMMON ===

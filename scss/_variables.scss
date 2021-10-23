@@ -1,3 +1,24 @@
+// FUNCTION
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+// BREAKPOINTS
+// iPad - ver/gor
+// iPhone - 6/7/8 Plus - ver-gor
+
+$breakpoin-xs-max: 575px;
+$breakpoin-sm-min: 576px;
+$breakpoin-sm-max: 767px;
+$breakpoin-md-min: 768px;
+$breakpoin-md-max: 991px;
+$breakpoin-lg-min: 992px;
+$breakpoin-lg-max: 1199px;
+$breakpoin-xl-min: 1200px;
+$breakpoin-xl-max: 1399px;
+$breakpoin-xxl-min: 1400px;
 // === FONT-WEIGHT ===
 $fw-light: 100;
 $fw-regular: 400;
@@ -5,10 +26,13 @@ $fw-medium: 600;
 $fw-bold: 700;
 
 // === FONT-SIZE ===
-$fs-sm: 12px;
-$fs-md: 15px;
-$fs-lg: 18px;
-$fs-xl: 48px;
+$fs-xxs: rem(10px);
+$fs-xs: rem(12px);
+$fs-s: rem(15px);
+$fs-m: rem(18px);
+$fs-l: rem(24px);
+$fs-xl: rem(36px);
+$fs-xxl: rem(48px);
 
 // === PADDING ===
 $padding-vertical-xs: 20px;
@@ -25,32 +49,32 @@ $color-divider: #c7d3ff;
 // WHITE
 $color-white: #fff;
 // RED
-$color-danger-400: #ffd7d7;
-$color-danger-500: #ff3535;
-$color-danger-600: #d43f3f;
+$color-red-400: #ffd7d7;
+$color-red-500: #ff3535;
+$color-red-600: #d43f3f;
 // YELLOW
-$color-warning-500: #ffc735;
+$color-yellow-500: #ffc735;
 // CIAN
 $color-cian-500: #35aaff;
 // PRIMARY
-$color-primary-50: #f5f8ff;
-$color-primary-150: #d2e1ff;
-$color-primary-100: #efeff7;
-$color-primary-200: #aeb8d0;
-$color-primary-300: #adb4d2;
-$color-primary-400: #8e96b7;
-$color-primary-500: #8d96bd;
-$color-primary-600: #7382a3;
-$color-primary-700: #7a85ad;
-$color-primary-800: #676f95;
-$color-primary-900: #495274;
+$color-gray-50: #f5f8ff;
+$color-gray-150: #d2e1ff;
+$color-gray-100: #efeff7;
+$color-gray-200: #aeb8d0;
+$color-gray-300: #adb4d2;
+$color-gray-400: #8e96b7;
+$color-gray-500: #8d96bd;
+$color-gray-600: #7382a3;
+$color-gray-700: #7a85ad;
+$color-gray-800: #676f95;
+$color-gray-900: #495274;
 // SECONDARY
-$color-secondary-50: #a0b4ff;
-$color-secondary-100: #6888ff;
-$color-secondary-200: #6188ff;
-$color-secondary-300: #5e80ff;
-$color-secondary-400: #4c85ff;
-$color-secondary-500: #5e81fe;
-$color-secondary-600: #3a79ff;
-$color-secondary-700: #4074f8;
-$color-secondary-800: #3d4f9f;
+$color-blue-50: #a0b4ff;
+$color-blue-100: #6888ff;
+$color-blue-200: #6188ff;
+$color-blue-300: #5e80ff;
+$color-blue-400: #4c85ff;
+$color-blue-500: #5e81fe;
+$color-blue-600: #3a79ff;
+$color-blue-700: #4074f8;
+$color-blue-800: #3d4f9f;
