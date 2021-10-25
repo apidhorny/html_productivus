@@ -1,4 +1,5 @@
 const HEADER = document.querySelector('.section-header');
+const a = 3;
 
 document.querySelector('.faq-accordion').addEventListener('click', (event) => {
     if (event.target.closest('.faq-accordion__item')) {
@@ -12,7 +13,7 @@ document.querySelector('.btn-burger').addEventListener('click', (event) => {
 
 const resetNav = () => {
     HEADER.classList.remove('section-header--active-nav');
-    console.log('done');
+    console.log('a');
 };
 
 window.addEventListener('resize', resetNav);
