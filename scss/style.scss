@@ -3,10 +3,7 @@
 @import '_mixins.scss';
 @import '_common.scss';
 
-// === HEADER ===
-.section-header {
-    position: relative;
-}
+//  === NAVIGATION ===
 .main-navigation {
     display: flex;
     align-items: center;
@@ -19,12 +16,12 @@
 
         .section-header & {
             @media (max-width: 991px) {
-                display: none;
                 position: absolute;
                 top: 100%;
                 right: 0;
                 left: 0;
-                z-index: 110;
+                z-index: 10;
+                display: none;
                 padding: 20px;
                 margin-left: 0;
                 background-color: $color-white;
@@ -53,6 +50,39 @@
             .logo {
                 margin-bottom: 14px;
             }
+        }
+    }
+}
+
+//  === /NAVIGATION ===
+
+// === HEADER ===
+.section-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $color-white;
+    box-shadow: 0 10px 50px rgba($color: $color-gray-200, $alpha: 0.6);
+
+    &::before {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &--active-nav {
+        &::before {
+            display: block;
+        }
+        .main-navigation__inner-wrap {
+            display: flex;
         }
     }
 }
