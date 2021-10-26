@@ -208,20 +208,31 @@ h4 {
     @include list-null;
     display: flex;
     justify-content: center;
+}
 
-    &__item {
+.swiper-pagination-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &::before {
+        display: block;
         width: 8px;
         height: 8px;
-        border-radius: 50%;
+        content: '';
         background-color: $color-gray-200;
-        cursor: pointer;
+        border-radius: 50%;
         transition: $transition;
-        &--active {
-            background-color: $color-blue-300;
-        }
-        & + & {
-            margin-left: 12px;
-        }
+    }
+
+    &-active::before {
+        background-color: $color-blue-300;
+    }
+    & + & {
+        margin-left: 20px;
     }
 }
 
